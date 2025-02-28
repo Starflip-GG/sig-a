@@ -1,0 +1,18 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Umleitung von HTTP auf HTTPS (allgemein)
+    RewriteCond %{HTTPS} off
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # Umleitung von direkter IP-Adresse auf die Domain (für HTTP und HTTPS)
+    RewriteCond %{HTTP_HOST} ^212\.227\.103\.220$
+    RewriteRule ^ https://STARFLIP.gg%{REQUEST_URI} [L,R=301]
+
+    # Weiterleitung von nicht existierenden Dateien und Verzeichnissen auf index.html
+    RewriteRule ^index\.html$ - [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . /index.html [L]
+</IfModule>
