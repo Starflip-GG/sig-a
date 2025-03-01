@@ -72,10 +72,10 @@
                 setTimeout(() => { this.modalsSetShow('Proceed'); }, 200);
             },
             modalCreditButton() {
-                window.open('https://rexbet.sell.app/', '_blank');
+                window.open('https://starflip.sell.app', '_blank');
             },
             modalCryptoButton(currency) {
-                window.open('https://rexbet.sell.app/', '_blank');
+                window.open('https://starflip.sell.app', '_blank');
             },
             modalGiftButton(provider) {
                 this.modalsSetShow(null);
