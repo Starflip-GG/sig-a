@@ -2,7 +2,7 @@
     <div class="cashier-deposit">
 
         <div class="deposit-section">
-            <div class="section-title">REXBET.GG</div>
+            <div class="section-title">STARFLIP.GG</div>
 
             <CashierElement v-on:click.native="modalCreditButton()" type="" method="credit" v-bind:enabled="generalSettings.credit.deposit.enabled" />
             <CashierElement v-on:click.native="modalRobuxButton()" type="roblox" method="robux" v-bind:enabled="generalSettings.robux.deposit.enabled" />
